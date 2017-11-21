@@ -182,9 +182,9 @@ items = table_service.query_entities('itemstable', filter="PartitionKey eq 'card
 print('And here are some cars.')
 for item in items:
     print('Make: ' + item.make)
-	print('Model: ' + item.model)
-	print('Year: ' + item.year)
-	print('Color: ' + item.color)
+    print('Model: ' + item.model)
+    print('Year: ' + item.year)
+    print('Color: ' + item.color)
     print('Price: ' + str(item.price) + '\n')
 
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'coffeshop'", select='brand,flavor,size,price')
