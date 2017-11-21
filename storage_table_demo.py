@@ -172,10 +172,11 @@ for item in items:
     print('Name: ' + item.description)
     print('Cost: ' + str(item.cost) + '\n')
 
-items = table_service.query_entities('itemstable', filter="PartitionKey eq 'clothingstore'", select='description,price')
+items = table_service.query_entities('itemstable', filter="PartitionKey eq 'clothingstore'", select='sku,item,cost')
 print('Here are clothing items.')
 for item in items:
-    print('Name: ' + item.description)
+    print('SKU: ' + item.sku)
+    print('Item: ' + item.item)
     print('Price: ' + str(item.cost) + '\n')
 
 items = table_service.query_entities('itemstable', filter="PartitionKey eq 'cardealership'", select='make,model,year,color,price')
